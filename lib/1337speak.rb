@@ -8,7 +8,10 @@
 
 class String
   def leetspeak
-  self.gsub("e", "3").gsub("o", "0").gsub("I", "1").gsub("s","z")
+  edited_self = self.gsub("e", "3").gsub("o", "0").gsub("I", "1")
+  end_of_word = edited_self.length
+  without_first = edited_self[1..end_of_word].gsub("s", "z")
+  new_self = edited_self[0].concat(without_first)
   end
 end 
 
