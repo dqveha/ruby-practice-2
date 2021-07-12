@@ -8,7 +8,7 @@
 
 class String
   def leetspeak
-  self.gsub(/[e]/, "3")
+  self.gsub("e", "3").gsub("o", "0")
   end
 end 
 
